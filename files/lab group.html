@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Group</title>
+        <!-- This is how you add your image below --> 
+  	<link rel = "icon" type = "image/png" href = "images/logo_b.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+
+    <style>
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero-image {
+        background-image: url("images/Lab_groups.jpg");
+        background-color: #cccccc;
+        height: 650px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .hero-text {
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-45%, -50%);
+        color: rgb(132, 131, 133);
+      }
+ 
+
+      .navbar-brand{
+        position: relative;
+        background: url(images/logo_yellow.png);
+        width: 40px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 16px 0px;
+      }
+
+      .topnav {
+        background-color: #333;
+        min-height: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:1000;//add z-index
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .active {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 17px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav a:hover, .dropdown:hover .dropbtn {
+        background-color: #555;
+        color: white;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child), .dropdown .dropbtn {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .topnav.responsive .dropdown {float: none;}
+        .topnav.responsive .dropdown-content {position: relative;}
+        .topnav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+ 
+
+
+      p.ex1 {
+        margin-left: 25px;
+      }
+ 
+
+      div.a {
+        text-align: center;
+      }
+  
+      div.b {
+        text-align: left;
+      }
+  
+      div.c {
+        text-align: right;
+      } 
+  
+      div.d {
+        text-align: justify;
+      }  
+  
+      figure {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 25px;
+        margin-right: 25px;
+        float: left;
+      }
+  
+      figcaption {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 1em;
+        margin-left: 25px;
+        margin-right: 25px;
+        float: bottom;
+      }
+ 
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: none; 
+      }
+   
+      .button {
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+    
+      .button {
+        background-color: gray; 
+        color: black; 
+        border: 2px solid #4CAF50;
+      }
+    
+      .button:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+    
+
+
+    </style>
+         <style>
+          body {
+            margin: 10;
+            font-family: "Lato", sans-serif;
+          }
+          
+          .sidebar {
+            margin-top: 0px;
+            padding-top:0px;
+            width: 225px;
+            background-color:#272338;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+          }
+          
+          .sidebar a {
+            display: block;
+            color: whitesmoke;
+            padding: 5px;
+            text-decoration: none;
+          }
+           
+          .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+          }
+          
+          .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+          }
+          
+          div.content {
+            border: none ;
+            position: relative;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 225px;
+            padding-left: 40px;
+            padding-top: 60px;
+            padding-right: 40px;
+            padding-bottom: 0px;
+            height: auto;
+          }
+          
+          @media screen and (max-width: 600px) {
+            .sidebar {
+              width: 100%;
+              height: auto;
+              position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+          }
+          
+          @media screen and (max-width: 600px) {
+            .sidebar a {
+              text-align: left;
+              float: none;
+            }
+          }
+        </style>
+            <style>
+              ul.demo {
+                list-style-type: none;
+              margin: 0;
+              padding-left: 20px;
+              padding-right: 25px;
+              padding-top: 10px;
+              }
+            </style>
+
+  </head>
+
+
+
+
+  <body>
+
+    <div class="topnav" id="myTopnav">
+      <a class="navbar-brand" href="../index.html"></a>
+      <a class="#" href="about me.html"><i class="about me"></i> About Me</a> 
+      <a class="active" href="lab group.html"><i class="lab group"></i> Lab Group</a> 
+      <a class="#" href="publications.html"><i class="publications"></i> Publications</a>
+      <a class="#" href="research activity.html"><i class="research activity"></i> Research Activity</a> 
+      <div class="dropdown">
+        <button class="dropbtn">Data Science <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="bulk RNAseq.html">Bulk RNAseq</a>
+          <a href="scRNAseq.html">scRNAseq</a>
+          <a href="biostatistics.html">Biostatistics</a>
+        </div>
+      </div> 
+      <a class="#" href="social media.html"><i class="social media"></i> Social Media</a> 
+      <a class="#"  href="contact me.html"><i class="contact me"></i> Contact Me</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </div>
+
+    
+    <div class="sidebar">
+      <h3 style="padding-top:70px;text-align:left;padding-left: 30px; color: white;">Lab Groups</h3>
+      <ul class="demo"> <li><a href="#a"></a></li></ul>
+      <ul class="demo"> <li><a href="#Kurt"><b>Kurt R. Stenmark, MD </b><br> Principal Investigator <br> Group Head</a></li></ul>
+      <ul class="demo"> <li><a href="#Maria">1. Maria G. Frid, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Dale">2. Dale R. Brown, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Min">3. Min Li, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Hui">4. Hui Zhang, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Sushil">5. Sushil Kumar, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Suzette">6. Suzette Riddle, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Sue">7. Sue Gu, MD</a></li></ul>
+      <ul class="demo"> <li><a href="#Nzali">8. Nzali V2 Campbell, PhD</a></li></ul>
+      <ul class="demo"> <li><a href="#Alex">9. Brittany A. McKeon</a></li></ul>
+      <ul class="demo"> <li><a href="#Andy">10. Andy Poczobutt</a></li></ul>
+      <ul class="demo"> <li><a href="#Marcia">11. Marcia McGowan</a></li></ul>
+
+    </div>
+
+
+    <div class="content" id="a">  
+
+      <div class="hero-image"> </div>
+    </div>
+
+    <div class="content" id="Kurt">  
+
+			<img src="images/Kurt.jpg" border= "1" style="width:290.5px;height:517px;margin-right:10px;margin-top:50px;margin-left:20px;float: right;">
+      <p style="font-size:100%;line-height: 125%;text-align:left;margin-top: 0.5in;margin-bottom: 0in;font-size: 20px;"><b>Kurt R. Stenmark, MD</b></p>
+			<p style="font-size:100%;line-height: 125%;text-align:left;font-size:18px;"> Professor, Pediatrics-Critical Care Medicine<br>La Cache Critical Care Chair in Pediatrics<br> Section Head, Pediatric Critical Care Medicine<br> Director, Cardiovascular Pulmonary Research Laboratories<br> Departments of Pediatrics and Medicine<br>University of Colorado, Anschutz Medical Campus<br> Aurora<br>Colorado 80045<br>
+			Email: <a href="mailto:Kurt.Stenmark@CUAnschutz.edu"> Kurt.Stenmark@CUAnschutz.edu</a></p>
+
+
+
+
+
+			<p style="margin-bottom: 0in; line-height: 150%"> Inflammation is thought to play a fundamental role in the pathogenesis of pulmonary hypertension (PH). We have demonstrated that inflammatory cells accumulate mostly on the outer part of the blood vessel in PH. We show that cells resident in the outside of the vessel wall, fibroblasts, undergo changes that allow them to cause a prolonged and non-resolving accumulation of inflammatory cells in the vessel wall. </p>
+      <br><br>
+      <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/15570" target="_blank"> Click here for more</a>
+    </div>
+
+    <BR> <BR><BR><BR><BR><BR> <BR><BR><BR><BR>
+    <div class="content" id="Maria">  
+
+			<img src="images/Maria.jpg" border= "1" style="width:290px;height:381.6px;margin-right:10px;margin-top:10px;margin-bottom:25px;margin-left:20px;float: right;">
+			<b>Maria G. Frid, PhD </b><br> 	Senior Instructor<br>
+			Email: <a href="mailto:Maria.Frid@CUAnschutz.edu"> Maria.Frid@CUAnschutz.edu</a>
+      <p style="font-size:100%;line-height: 125%;text-align:left;margin-top: 0.5in;margin-bottom: 0in;font-size: 18px;"><b>Research Interests</b></p>
+      
+      <p style="margin-bottom: 0in; line-height: 150%">Dr. Frid's research focuses on the role of bone marrow-derived inflammatory and progenitor cells in pulmonary vascular remodeling. She investigate the mechanisms leading to the recruitment, retention, and differentiation of stem or progenitor cells in the lung and lung circulation.</p>
+
+			<p style="margin-bottom: 0in; line-height: 150%"><b>Inflammation, immunity, and vascular remodeling in pulmonary hypertension; Evidence for complement involvement?</b> </p>
+      <p style="margin-bottom: 0in; line-height: 150%">Pulmonary (arterial) hypertension (PH/PAH) is a life-threatening cardiopulmonary disorder. Experimental evidence suggests involvement of inflammatory and autoimmune processes in pathogenesis of PH/PAH, however the triggering and disease-promoting mechanisms remain unknown. The complement system is a key arm of innate immunity implicated in various pro-inflammatory and autoimmune diseases, yet, surprisingly little is known about the role of complement in PH/PAH pathogenesis. The preponderance of the existing data associates complement with PH/PAH via analysis of plasma and does not study the lung directly. Therefore, we aimed to resolve this by analyzing both the mechanisms of local lung-specific complement activation and the correlation of dysregulated plasma complement to clinical outcome in PAH patients. In our recent studies, reviewed herein, we show, for the first time, that immunoglobulin-driven activation of the complement cascade, specifically its alternative pathway, in the pulmonary perivascular areas, is a key mechanism initiating pro-inflammatory processes in the early stage of experimental hypoxic PH (a form of "sterile inflammation"). In human patients with end-stage PAH, we have demonstrated that perivascular deposition of immunoglobulin G (IgG) and activation of the complement cascade are "longitudinally" persistent in the disease. We also showed, using unbiased network analysis, that plasma complement signaling, including again the Alternative pathway, is a prognostic factor of survival in patients with idiopathic PAH (IPAH). Based on these initial findings, we suggest that vascular-specific, immunoglobulin-driven dysregulated complement signaling triggers and maintains pulmonary vascular remodeling and PH. Future experiments in this area would facilitate discoveries on whether complement signaling can serve both as a biomarker and therapeutic target in PH/PAH.</p>
+      
+      <p style="margin-bottom: 0in; line-height: 150%"><b>Immunoglobulin-driven Complement Activation Regulates Proinflammatory Remodeling in Pulmonary Hypertension</b> </p>
+      <p style="margin-bottom: 0in; line-height: 150%">Pulmonary (arterial) hypertension (PH/PAH) is a life-threatening cardiopulmonary disorder. Experimental evidence suggests involvement of inflammatory and autoimmune processes in pathogenesis of PH/PAH, however the triggering and disease-promoting mechanisms remain unknown. The complement system is a key arm of innate immunity implicated in various pro-inflammatory and autoimmune diseases, yet, surprisingly little is known about the role of complement in PH/PAH pathogenesis. The preponderance of the existing data associates complement with PH/PAH via analysis of plasma and does not study the lung directly. Therefore, we aimed to resolve this by analyzing both the mechanisms of local lung-specific complement activation and the correlation of dysregulated plasma complement to clinical outcome in PAH patients. In our recent studies, reviewed herein, we show, for the first time, that immunoglobulin-driven activation of the complement cascade, specifically its alternative pathway, in the pulmonary perivascular areas, is a key mechanism initiating pro-inflammatory processes in the early stage of experimental hypoxic PH (a form of "sterile inflammation"). In human patients with end-stage PAH, we have demonstrated that perivascular deposition of immunoglobulin G (IgG) and activation of the complement cascade are "longitudinally" persistent in the disease. We also showed, using unbiased network analysis, that plasma complement signaling, including again the Alternative pathway, is a prognostic factor of survival in patients with idiopathic PAH (IPAH). Based on these initial findings, we suggest that vascular-specific, immunoglobulin-driven dysregulated complement signaling triggers and maintains pulmonary vascular remodeling and PH. Future experiments in this area would facilitate discoveries on whether complement signaling can serve both as a biomarker and therapeutic target in PH/PAH.</p>
+    </div>
+    <BR> <BR><BR><BR>
+		
+    <div class="content" id="Dale">  
+	
+        <img src="Images/img1.png" border= "1" style="width:250px;height:300px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+        <b>Dale Brown, PhD </b><br> 	Senior Instructor<br>
+        Email: <a href="mailto:Dale.Brown@CUAnschutz.edu"> Dale.Brown@CUAnschutz.edu</a>
+        <p style="font-size:100%;line-height: 125%;text-align:left;margin-top: 0.5in;margin-bottom: 0in;font-size: 18px;"><b>Research Interests</b></p>
+        <p style="margin-bottom: 0in; line-height: 150%"><b>17β-Estradiol and estrogen receptor α protect right ventricular function in pulmonary hypertension via BMPR2 and apelin</b> </p>
+        <p style="margin-bottom: 1in; line-height: 150%">Women with pulmonary arterial hypertension (PAH) exhibit better right ventricular (RV) function and survival than men; however, the underlying mechanisms are unknown. We hypothesized that 17β-estradiol (E2), through estrogen receptor α (ER-α), attenuates PAH-induced RV failure (RVF) by upregulating the procontractile and prosurvival peptide apelin via a BMPR2-dependent mechanism. We found that ER-α and apelin expression were decreased in RV homogenates from patients with RVF and from rats with maladaptive (but not adaptive) RV remodeling. RV cardiomyocyte apelin abundance increased in vivo or in vitro after treatment with E2 or ER-α agonist. Studies employing ER-α-null or ER-β-null mice, ER-α loss-of-function mutant rats, or siRNA demonstrated that ER-α is necessary for E2 to upregulate RV apelin. E2 and ER-α increased BMPR2 in pulmonary hypertension RVs and in isolated RV cardiomyocytes, associated with ER-α binding to the Bmpr2 promoter. BMPR2 is required for E2-mediated increases in apelin abundance, and both BMPR2 and apelin are necessary for E2 to exert RV-protective effects. E2 or ER-α agonist rescued monocrotaline pulmonary hypertension and restored RV apelin and BMPR2. We identified what we believe to be a novel cardioprotective E2/ER-α/BMPR2/apelin axis in the RV. Harnessing this axis may lead to novel RV-targeted therapies for PAH patients of either sex.</p>
+    </div>
+
+    <div class="content" id="Min">  			
+      <img src="Images/img1.png" border= "1" style="width:250px;height:300px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+			<b>Min Li, PhD </b><br> 	Senior Instructor<br>
+			Email: <a href="mailto:Min.Li@CUAnschutz.edu"> Min.Li@CUAnschutz.edu</a>
+
+      <p style="font-size:100%;line-height: 125%;text-align:left;margin-top: 0.5in;margin-bottom: 0in;font-size: 18px;"><b>Research Interests</b></p>
+
+      <p style="margin-bottom: 0in; line-height: 150%"><b>Microenvironmental Regulation of Macrophage Transcriptomic and Metabolomic Profiles in Pulmonary Hypertension</b> </p>
+
+      <p style="margin-bottom: 0.5in; line-height: 150%">The recruitment and subsequent polarization of inflammatory monocytes/macrophages in the perivascular regions of pulmonary arteries is a key feature of pulmonary hypertension (PH). However, the mechanisms driving macrophage polarization within the adventitial microenvironment during PH progression remain unclear. We previously established that reciprocal interactions between fibroblasts and macrophages are essential in driving the activated phenotype of both cell types although the signals involved in these interactions remain undefined. We sought to test the hypothesis that adventitial fibroblasts produce a complex array of metabolites and proteins that coordinately direct metabolomic and transcriptomic re-programming of naïve macrophages to recapitulate the pathophysiologic phenotype observed in PH. Media conditioned by pulmonary artery adventitial fibroblasts isolated from pulmonary hypertensive (PH-CM) or age-matched control (CO-CM) calves were used to activate bone marrow derived macrophages. RNA-Seq and mass spectrometry-based metabolomics analyses were performed. Fibroblast conditioned medium from patients with idiopathic pulmonary arterial hypertension or controls were used to validate transcriptional findings. The microenvironment was targeted in vitro using a fibroblast-macrophage co-culture system and in vivo in a mouse model of hypoxia-induced PH. Both CO-CM and PH-CM actively, yet distinctly regulated macrophage transcriptomic and metabolomic profiles. Network integration revealed coordinated rewiring of pro-inflammatory and pro-remodeling gene regulation in concert with altered mitochondrial and intermediary metabolism in response to PH-CM. Pro-inflammation and metabolism are key regulators of macrophage phenotype in vitro, and are closely related to in vivo flow sorted lung interstitial/perivascular macrophages from hypoxic mice. Metabolic changes are accompanied by increased free NADH levels and increased expression of a metabolic sensor and transcriptional co-repressor, C-terminal binding protein 1 (CtBP1), a mechanism shared with adventitial PH-fibroblasts. Targeting the microenvironment created by both cell types with the CtBP1 inhibitor MTOB, inhibited macrophage pro-inflammatory and metabolic re-programming both in vitro and in vivo. In conclusion, coordinated transcriptional and metabolic reprogramming is a critical mechanism regulating macrophage polarization in response to the complex adventitial microenvironment in PH. Targeting the adventitial microenvironment can return activated macrophages toward quiescence and attenuate pathological remodeling that drives PH progression.</p>
+      
+    </div>
+    
+    <div class="content" id="Hui">  
+
+      <img src="images/img1.png" border= "1" style="width:250px;height:300px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Hui Zhang, MD, PhD </b><br> Instructor<br>
+			Email: <a href="mailto:Hui.Zhang@CUAnschutz.edu"> Hui.Zhang@CUAnschutz.edu</a>
+      <p style="font-size:100%;line-height: 125%;text-align:left;margin-top: 0.5in;margin-bottom: 0in;font-size: 18px;"><b>Research Interests</b></p>
+
+      <p style="margin-bottom: 0in; line-height: 150%"><b>RNA-Binding Proteins in Pulmonary Hypertension</b> </p>
+			<p style="margin-bottom: 0in; line-height: 150%">Pulmonary hypertension (PH) is a life-threatening disease characterized by significant vascular remodeling and aberrant expression of genes involved in inflammation, apoptosis resistance, proliferation, and metabolism. Effective therapeutic strategies are limited, as mechanisms underlying PH pathophysiology, especially abnormal expression of genes, remain unclear. Most PH studies on gene expression have focused on gene transcription. However, post-transcriptional alterations have been shown to play a critical role in inflammation and metabolic changes in diseases such as cancer and systemic cardiovascular diseases. In these diseases, RNA-binding proteins (RBPs) have been recognized as important regulators of aberrant gene expression via post-transcriptional regulation; however, their role in PH is less clear. Identifying RBPs in PH is of great importance to better understand PH pathophysiology and to identify new targets for PH treatment. In this manuscript, we review the current knowledge on the role of dysregulated RBPs in abnormal mRNA gene expression as well as aberrant non-coding RNA processing and expression (e.g., miRNAs) in PH.</p>	
+
+      
+      <p style="margin-bottom: 0in; line-height: 150%"><b>Metabolic and Proliferative State of Vascular Adventitial Fibroblasts in Pulmonary Hypertension Is Regulated Through a MicroRNA-124/PTBP1 (Polypyrimidine Tract Binding Protein 1)/Pyruvate Kinase Muscle Axis</b> </p>
+			<p style="margin-bottom: 0in; line-height: 150%"><b>Background:</b> An emerging metabolic theory of pulmonary hypertension (PH) suggests that cellular and mitochondrial metabolic dysfunction underlies the pathology of this disease. We and others have previously demonstrated the existence of hyperproliferative, apoptosis-resistant, proinflammatory adventitial fibroblasts from human and bovine hypertensive pulmonary arterial walls (PH-Fibs) that exhibit constitutive reprogramming of glycolytic and mitochondrial metabolism, accompanied by an increased ratio of glucose catabolism through glycolysis versus the tricarboxylic acid cycle. However, the mechanisms responsible for these metabolic alterations in PH-Fibs remain unknown. We hypothesized that in PH-Fibs microRNA-124 (miR-124) regulates PTBP1 (polypyrimidine tract binding protein 1) expression to control alternative splicing of pyruvate kinase muscle (PKM) isoforms 1 and 2, resulting in an increased PKM2/PKM1 ratio, which promotes glycolysis and proliferation even in aerobic environments.<br>
+
+        <b>Methods:</b> Pulmonary adventitial fibroblasts were isolated from calves and humans with severe PH (PH-Fibs) and from normal subjects. PTBP1 gene knockdown was achieved via PTBP1-siRNA; restoration of miR-124 was performed with miR-124 mimic. TEPP-46 and shikonin were used to manipulate PKM2 glycolytic function. Histone deacetylase inhibitors were used to treat cells. Metabolic products were determined by mass spectrometry-based metabolomics analyses, and mitochondrial function was analyzed by confocal microscopy and spectrofluorometry.<br>
+        
+        <b>Results:</b> We detected an increased PKM2/PKM1 ratio in PH-Fibs compared with normal subjects. PKM2 inhibition reversed the glycolytic status of PH-Fibs, decreased their cell proliferation, and attenuated macrophage interleukin-1β expression. Furthermore, normalizing the PKM2/PKM1 ratio in PH-Fibs by miR-124 overexpression or PTBP1 knockdown reversed the glycolytic phenotype (decreased the production of glycolytic intermediates and byproducts, ie, lactate), rescued mitochondrial reprogramming, and decreased cell proliferation. Pharmacological manipulation of PKM2 activity with TEPP-46 and shikonin or treatment with histone deacetylase inhibitors produced similar results.<br>
+        
+        <b>Conclusions:</b> In PH, miR-124, through the alternative splicing factor PTBP1, regulates the PKM2/PKM1 ratio, the overall metabolic, proliferative, and inflammatory state of cells. This PH phenotype can be rescued with interventions at various levels of the metabolic cascade. These findings suggest a more integrated view of vascular cell metabolism, which may open unique therapeutic prospects in targeting the dynamic glycolytic and mitochondrial interactions and between mesenchymal inflammatory cells in PH.</p>
+		</div>
+
+
+    <div class="content" id="Sushil">  
+
+      <img src="images/sushil.png" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Sushil Kumar, PhD </b><br> Research Associate<br>
+			Email: <a href="Sushil.Kumar@CUAnschutz.edu"> Sushil.Kumar@CUAnschutz.edu</a>
+      <p style="font-size:120%;text-align:left; font-family:sans-serif; margin-right: 0.5in;line-height: 150%;font-size: 18px;"> <b>Current Research Goels:</b> The main emphasis of Dr. Kumar's research is understanding molecular and cellular mechanisms that lead to the development of pulmonary hypertension and finding new and effective therapeutic targets for cure of pulmonary hypertension. Currently he is involved in following biomedical and bioinformatic research.</p>
+
+      <ul>
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Uncovering the role of small extracellular vesicles / exosome secreted from pulmonary hypertensive adventitial fibroblasts induce metabolic reprogramming and pro-inflammatory signaling in Macrophages. </b></p></li>
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Dr. Kumar is also COI with James R Klinger at the Brown University for investigating reversal of pulmonary hypertension by mesenchymal stem cell-derived extracellular vesicles. 
+         </b></p></li>
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> Role of Microenvironment to Regulate Macrophage Transcriptomic and Metabolomic Profiles in Pulmonary Hypertension with the collaboration with Dr. Min Li and Dr. Suzette Riddle. </p></li>
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Single-Cell RNA profiling of alveolar and interstitial macrophage populations in hypoxic pulmonary hypertension. </b></p></li>
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Single-Cell RNA profiling of alveolar and interstitial macrophage populations in schistosomiasis-associated pulmonary hypertension in collaboration with Dr. Brian B. Graham and Dr. Rahul Kumar, University of California, San Francisco | UCSF. </b></p></li> 
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Single-Cell RNA profiling of lung dendritic cells populations in hypoxic pulmonary hypertension in collaboration with Dr. Claudia University of Colorado, Anschutz Medical Campus. </b></p></li>
+  
+  
+         <li><p style="font-size:120%;text-align:left; margin-right: 0.5in;line-height: 150%; font-family:sans-serif; font-size: 18px;"> <b></b>Developing a fast, efficient, and automated pipline with highest reproducibility for analysing big dataset by employing bash/shel scripting, python, R, PHP programming languge for speeding the analysis of biomedical research. Dr. Kumar developed various pipline to analyse the RNA seq data.  </b></p></li>
+        </ul>
+  			</p>	
+        <br><br><br><br><br>
+
+		</div>
+
+
+
+    <div class="content" id="Suzette">  
+
+      <img src="images/Suzette.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Suzette Riddle, PhD </b><br>  Professional Research Assistant<br>
+			Email: <a href="suzette.riddle@cuanschutz.edu">  suzette.riddle@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+    <div class="content" id="Sue">  
+
+      <img src="images/Sue.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Sue Gu, MD </b><br>  Pulmonary Fellow<br>
+			Email: <a href="sue.gu@cuanschutz.edu"> sue.gu@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+    <div class="content" id="Nzali">  
+
+      <img src="images/Nzali.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Nzali V2 Campbell, PhD </b><br>  Post-Doctral Fellow<br>
+			Email: <a href="nzali.campbell@cuanschutz.edu">  nzali.campbell@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+
+    <div class="content" id="Alex">  
+
+      <img src="images/Alex.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Brittany A. McKeon </b><br>  Sr. Professional Research Assistant<br>
+			Email: <a href="brittany.mckeon@cuanschutz.edu">  brittany.mckeon@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+
+
+    <div class="content" id="Andy">  
+
+      <img src="images/Andy.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Andy Poczobutt </b><br> Business Services Program Directoter<br>
+			Email: <a href="andy.poczobutt@cuanschutz.edu"> andy.poczobutt@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+    <div class="content" id="Marcia">  
+
+      <img src="images/Marcia.jpg" border= "1" style="width:290px;height:304.2px;margin-right:10px;margin-top:35px;margin-left:20px;float: right;">
+      <b>Marcia McGowan </b><br> Program Assistant I<br>
+			Email: <a href="marcia.mcgowan@cuanschutz.edu"> marcia.mcgowan@cuanschutz.edu</a>
+ 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+  </body>
+  
+</html>

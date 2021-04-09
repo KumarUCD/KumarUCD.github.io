@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <!-- This is how you add your image below --> 
+    <link rel = "icon" type = "image/png" href = "images/logo_b.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        background-color: #aa9494;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+      
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+       
+      .sidebar a.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      
+      div.content {
+        margin-top: 40px;
+        margin-left: 250px;
+        padding: 1px 16px;
+        height: 1000px;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+      }
+      
+      @media screen and (max-width: 600px) {
+        .sidebar a {
+          text-align: left;
+          float: none;
+        }
+      }
+    </style>
+    <style>
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero-image {
+        background-image: url("images/Gog5.jpg");
+        background-color: #cccccc;
+        height: 600px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .hero-text {
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-45%, -50%);
+        color: rgb(132, 131, 133);
+      }
+ 
+
+      .navbar-brand{
+        position: relative;
+        background: url(images/logo_yellow.png);
+        width: 40px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 16px 0px;
+      }
+
+      .topnav {
+        background-color: #333;
+        min-height: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:1000;//add z-index
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .active {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 17px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav a:hover, .dropdown:hover .dropbtn {
+        background-color: #555;
+        color: white;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child), .dropdown .dropbtn {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .topnav.responsive .dropdown {float: none;}
+        .topnav.responsive .dropdown-content {position: relative;}
+        .topnav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+ 
+
+
+      p.ex1 {
+        margin-left: 25px;
+      }
+ 
+
+      div.a {
+        text-align: center;
+      }
+  
+      div.b {
+        text-align: left;
+      }
+  
+      div.c {
+        text-align: right;
+      } 
+  
+      div.d {
+        text-align: justify;
+      }  
+  
+      figure {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 25px;
+        margin-right: 25px;
+        float: left;
+      }
+  
+      figcaption {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 1em;
+        margin-left: 25px;
+        margin-right: 25px;
+        float: bottom;
+      }
+ 
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: none; 
+      }
+   
+      .button {
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+    
+      .button {
+        background-color: gray; 
+        color: black; 
+        border: 2px solid #4CAF50;
+      }
+    
+      .button:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+    
+      a {text-decoration: none;}
+    </style>
+
+   
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a class="navbar-brand" href="../index.html"></a>
+    <a class="#" href="about me.html"><i class="about me"></i> About Me</a> 
+    <a class="#" href="lab group.html"><i class="lab group"></i> Lab Group</a> 
+    <a class="active" href="publications.html"><i class="publications"></i> Publications</a>
+    <a class="#" href="research activity.html"><i class="research activity"></i> Research Activity</a> 
+    <div class="dropdown">
+      <button class="dropbtn">Data Science <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="bulk RNAseq.html">Bulk RNAseq</a>
+        <a href="scRNAseq.html">scRNAseq</a>
+        <a href="biostatistics.html">Biostatistics</a>
+      </div>
+    </div> 
+    <a class="#" href="social media.html"><i class="social media"></i> Social Media</a> 
+    <a class="#"  href="contact me.html"><i class="contact me"></i> Contact Me</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  </div>
+
+
+ 
+
+
+
+  <div class="sidebar">
+    <h3 style="padding-top:70px;text-align:center;">Table of Content</h3>
+    <ol>
+      <li><a href="#Peer reviewed Articles">Peer reviewed Articles</a></li>
+      <li><a href="#Conference Abstracts">Conference Abstracts</a></li>
+      <li><a href="PhD Thesis.pdf">PhD Thesis</a></li>
+      <li><a href="#Master Thesis">Master Thesis</a></li>
+    </ol>
+  </div>
+
+  <div class="content" id="Peer reviewed Articles" >
+    <h1 style="font-size:160%;text-align:center;padding-top:60px;padding-bottom:0px;">Publications</h1>
+
+    <p style="font-family:Monospace;font-size:160%;letter-spacing: 5px;text-align:left;padding-top:5px;padding-bottom:20px;">Peer reviewed Articles</p>
+    <div style="padding-right:50px;">
+		  <ol>
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Kumar S, Frid MG, Zhang H, Li M, Riddle S, Brown RD , Yadav SC, Hansen K,  Stenmark KR. (2021). Small Extracellular Vesicles Containing Complement from Pulmonary Hypertensive Adventitial Fibroblasts Induce Metabolic Reprogramming and Pro-inflammatory Signaling in Macrophages. (Under revision JCI Insight, MS ID: 148382-INS-RG-1).
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Fini MA, Pennock ND, Bagchi AK, Kumar S, Bagchi R, Elajaili H, D'Alessandro A, Millhollin JD, Crawley WT, Strassheim D, Kotamarthi A, Karoor V, Hybertson BM, Nozik-Grayck E, Irwin D, Singal PK  and Stenmark KR. (2021). Differential Metabolic Effects of α-Tocophery. Succinate Sensitize the Human Breast Cancer Cells to Doxorubicin and Reduce Doxorubicin Induced Cardiotoxicity (under revision, antioxidants, MS ID: antioxidants-1081292).</p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Brown RD, Hunter KS, Li M, Frid MG, Harral J, Edwards MG, Krafsur GM, Holt TN, Zhang H, Riddle SR, Kumar S, Hu C-J, Graham BB, Walker LA, Garry FB, Buttrick PM, Stenmark KR. (2021). Functional and molecular determinants of early right ventricular adaptation to severe pulmonary hypertension (Submitted, Under Review, Cardiovascular Research, MS ID: em.cardiovascres.0.714750.7e1fe411).
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Reed D, Kumar D, Kumar S, Raina K, Punia R, Saba L, Cruickshank-Quinn C, Tabakoff B, Reisdorph N, Edwards M, Wempe M, Agarwal C, Agarwal R. (2021). Transcriptome and metabolome changes induced by bitter melon (Momordica charantia)- intake in a high-fat diet induced obesity model.(Submitted in Journal of Nutrition, under review, MS ID: JN-2021-0325).
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Li M, Riddle S, Kumar S, Poczobutt J, McKeon BA,  Frid MG, Ostaff M, Reisz JA,  Nemkov T, Fini MA, Laux A, Hu CJ, El Kasmi KC, D'Alessandro A, Brown RD, Zhang H and Stenmark KR. (2021). Microenvironmental Regulation of Macrophage Transcriptomic and Metabolomic Profiles in Pulmonary Hypertension. Front. Immunol., doi.org/10.3389/fimmu.2021.640718.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Frid MG, McKeon BA, Thurman JM, Maron BA, Li M, Zhang H, Kumar S, Sullivan T, Laskowsky J, Fini MA, Hu S, Tuder RM, Gandjeva A, Wilkins MR, Rhodes CJ, Ghataorhe P, Leopold JA, Wang RS, Holers VM, Stenmark KR. (2020). Immunoglobulin-driven Complement Activation Regulates Proinflammatory Remodeling in Pulmonary Hypertension. Am J Respir Crit Care Med. 201(2):224-239. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar R, Mickael C, Kassa B, Sanders L, Hernandez-Saavedra D, Koyanagi DE, Kumar S, Pugliese SC, Thomas S, McClendon J, Maloney JP, Janssen WJ, Stenmark KR, Tuder RM, Graham BB. (2020). Interstitial macrophage-derived thrombospondin-1 contributes to hypoxia-induced pulmonary hypertension. Cardiovasc Res. 116(12):2021-2030. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Hu CJ, Poth JM, Zhang H, Flockton A, Laux A, Kumar S, McKeon B, Mouradian G, Li M, Riddle S, Pugliese SC, Brown RD, Wallace EM, Graham BB, Frid MG, Stenmark KR. (2019). Suppression of HIF2 signalling attenuates the initiation of hypoxia-induced pulmonary hypertension. Eur Respir J. 54(6):1900378. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Tyagi A, Kumar S, Raina K, Wempe MF, Maroni PD, Agarwal R, Agarwal C. (2019). Differential effect of grape seed extract and its active constituent procyanidin B2 3,3″-di-O-gallate against prostate cancer stem cells. Mol Carcinog. 58(7):1105-1117. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Dhar D, Deep G, Kumar S, Wempe MF, Raina K, Agarwal C, Agarwal R. (2018). Bitter melon juice exerts its efficacy against pancreatic cancer via targeting both bulk and cancer stem cells. Mol Carcinog. 2018 Sep;57(9):1166-1180.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Nedumaran B, Rudra P, Gaydos J, Kumar S, Meacham RB, Burnham EL, Malykhina AP. (2017). Impact of Regular Cannabis Use on Biomarkers of Lower Urinary Tract Function. Urology. 109:223.e9-223.e16.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Zhang H, Wang D, Li M, Plecita-Hlavata L, D'Alessandro A, Tauber J, Riddle S, Kumar S, Flockton A, McKeon BA, Frid M, Haines J, Caruso P, Kasmi KE, Petr Jezek, Morrell N, Hu C-J, and Stenmark KR, (2017). The Metabolic and Proliferative State of Vascular Adventitial Fibroblasts in Pulmonary Hypertension is Regulated through a MiR-124/PTBP1/PKM Axis. Circulation, (Published).
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Pugliese SC, Kumar S, Janssen WJ, Graham BB, Frid MG, Riddle SR, El Kasmi KC, and Stenmark KR. (2017) A Time and Compartment-Specific Activation of Lung Macrophages in Hypoxic Pulmonary Hypertension, The Journal of Immunology, 198: 4802–4812.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Li M, Riddle S, Zhang H, D'Alessandro A, Flockton A, Serkova NJ, Hansen KC, Moldvan R, McKeon BA, Frid M, Kumar S, Li H, Liu H, Cánovas A, Medrano JF, Thomas MG, Iloska D, Plecita-Hlavata L, Jezek P, Pullamsetti S, Fini MA, El Kasmi KC, Zhang Q, Stenmark KR. (2016). Metabolic Reprogramming Regulates the Proliferative and Inflammatory Phenotype of Adventitial Fibroblasts in Pulmonary Hypertension Through the Transcriptional Co-Repressor C-terminal Binding Protein-1. Circulation, 134: 1105-1121. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Ting H, Deep G, Kumar S, Jain AK, Agarwal C, Agarwal R. (2016) Beneficial effects of the naturally occurring flavonoid silibinin on the prostate cancer microenvironment: role of monocyte chemotactic protein-1 and immune cell recruitment. Carcinogenesis. 37:589-99. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Raina K, Kumar S, Dhar D and Agarwal R (2015). Silibinin and colorectal cancer chemoprevention: a comprehensive review on mechanisms and efficacy. Journal of Biomedical Research (Manuscript ID JBR-2015-0111, Published). 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kumar D, Raina K, Agarwal R, Agarwal C. (2014) Functional modification of adipocytes by grape seed extract impairs their pro-tumorigenic signaling on colon cancer stem cells and the daughter cancer cells. Oncotarget. 5:10151-69.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Raina K, Agarwal C and Agarwal R. (2014) Silibinin strongly inhibits the growth kinetics of colon cancer stem cell-enriched spheroids by modulating interleukin 4/6-mediated survival signals. Oncotarget. 5:4972-89.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Derry MM, Somasagara RR, Raina K, Kumar S, Gomez J, Patel M, Agarwal R and Agarwal C. (2014) Target identification of grape seed extract in colorectal cancer using drug affinity responsive target stability (DARTS) technique: role of endoplasmic reticulum stress response proteins. Current Cancer Drug Targets. 14:323-36. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Raina K and Agarwal R (2014). Chemopreventive and anticancer efficacy of Silibinin against colorectal cancer In: Multi-targeted approach to treatment of cancer (Eds.  Gandhi V, Mehta K, Grover R, Pathak S and Agarwal BB), Springer Cham Heidelberg New York Dordrecht London, ISBN 978-3-319-12252-6, P no. 339-350.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Forster GM, Raina K, Kumar A, Kumar S, Agarwal R, Chen MH, Bauer JE, McClung AM and Ryan EP. (2013). Rice varietal differences in bioactive bran components for inhibition of colorectal cancer cell growth. Food Chemistry. 141:1545-52.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Chaturvedy V, Kumar S, Shahi SK, Tyagi MB, Kumar A. (2012). Sodium dodecyl sulfate (SDS): Applications, toxicity and biodegradation. In: Plant Genome; Conservation, Manipulation and diversity (Eds. Roy BK, Chaudhary BR, Sinha RP). Narosa Publishing House Pvt. Ltd. New Delhi, ISBN 978-81-8487-133-5, p no. 113-126. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Vatsyayan R, Lelsani PC, Chaudhary P, Kumar S, Awasthi S, Awasthi YC. (2012). The expression and function of vascular endothelial growth factor in retinal pigment epithelial (RPE) cells is regulated by 4-hydroxynonenal (HNE) and glutathione S-transferaseA4-4. Biochem Biophys Research Communications.417:346-51.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Shahi SK, Kumar A, Kumar S, Singh SK, Gupta SK,  Singh TB. (2012) Prevalence of diabetic foot ulcer and associated risk factors in diabetic patients from north India. The Journal of Diabetic foot complications. 3: 83-91.  
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kokate RA, Sahu M, Chaudhary P, Sharma R, Awasthi S  and Awasthi YC. (2011). Inhibition of mercapturic acid pathway-mediated disposal of 4- hydroxynonenal causes complete and sustained remission of human cancer xenografts in nude mice. Indian Journal of Experimental Biology, Journal Cover Page Coverage. 49 : 817-25. 
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Shahi SK, Kumar A and Dixit VK. (2011). The enigma of Helicobacter pylori   infection and gastrointestinal diseases. In: Current topics in biotechnology and microbiology (Eds. Dhingra HK, Jha PN, Chandary PB). LAP Lambert Academic Publishing AG & Co. KG, Dudweller Dandstr, Germany, ISBN 978-3-8443-2975-9, p no. 237-267.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Kumar S, Kumar A and Dixit VK. (2011). Genetic diversity in strains of Helicobacter pylori from India and their relatedness to strains from other parts of the world. Infection Genetics and Evolution. 11: 242-47.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kumar A and Dixit VK. (2010). Diversity in cag pathogenicity island (cag PAI) of Helicobacter pylori isolates from North and South Indian populations. Journal of Medical Microbiology. 59: 32-40.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Sinha R P, Tyagi MB, Kumar S and Kumar A. (2010) UV-B radiation – induced stress and protection strategies in cyanobacteria. In: New Vistas in Algal Biotechnology (Ed. Das MK). Daya Publishing House 1123/74, Deva Ram Park Tri Nagar, Delhi, ISBN 81-7035-647-4, p no. 93-110.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kumar A and Dixit VK. (2009). Evidences showing association of interleukin- 1B polymorphisms with increased risk of gastric cancer in an Indian population. Biochemical and Biophysical Research Communications. 387 (3): 456–60.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Singh SK, Gupta K, Tiwari S, Shahi SK, Kumar S, Kumar A, Gupta SK. Detecting aerobic bacterial diversity in patients with diabetic foot wounds using ERIC-PCR: a preliminary communication. The International Journal of Lower Extremity Wounds. 2009 Dec;8 (4): 203-8.
+        </p></li>
+
+        <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Kumar S, Kumar A and Dixit V K. (2008). Direct detection and analysis of vacA genotypes   and cagA gene of Helicobacter pylori from gastric biopsies by a novel multiplex polymerase  chain reaction assay. Diagnostic Microbiology and Infectious Disease 62 (4): 366–73. 
+        </p></li>
+
+        
+        
+			  
+		  </ol>	
+    </div>
+	</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="content" id="Conference Abstracts">
+     
+    <h1 style=" font-size:160%;text-align:center;padding-top:60px;padding-bottom:0px;"></h1>
+
+    <p style="font-family:Monospace;font-size:160%;padding-top:60px;letter-spacing: 5px;text-align:left;padding-top:5px;padding-bottom:20px;">Conference Abstracts</p>
+    <div style="padding-right:50px;">
+
+
+  <ol>
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Ostaff MJ, Riddle S, Flockton A, Frid M, Kumar S, McKeon BA, Li M, Moldovan R, Zhang H, El Kasmi AK, D'Alessandro and Stenmark KR. Targeting Metabolic Reprogramming In Macrophages Activated By Adventitial Fibroblasts In Pulmonary Hypertension As A New Potential Therapy Approach. Am J Respir Crit Care Med. 2017;195:A2266. 
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Li M, Plecita L, Mckeon AB, Frid M, Zhang H, Kumar S, Flockton A, and Stenmark KR. Ros Production And DNA Instability of Adventitial Fibroblasts Are Regulated By Ctbp1 In Pulmonary Hypertension. Am J Respir Crit Care Med. 2017;195:A2262. 
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Deepanshi Dhar, Gagan Deep, Kumar S, Chapla Agarwal, Natalie Serkova, Michael Wempe, Komal Raina, Rajesh Agarwal. Bitter melon efficacy against human pancreatic cancer cells: possible involvement of cellular stemness and metabolome targets. Annual Meeting of the AACR; 2017
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  M Li, BA McKeon, S Kumar, M Frid, A Flockton, S Riddle, A D’Alessandro, et al. 4-Methylthio-2-Oxobutyric Acid (MTOB), A Novel Small Molecule And Inhibitor Of CtBP1, Inhibits The Proliferative And Pro-inflammatory Phenotype Of Adventitial Fibroblast In Pulmonary Hypertension. D26. I'M ON FIRE-INFLAMMATION IN PULMONARY VASCULAR DISEASE, American Thoracic Society, 2016A6588-A6588. 
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kumar D, Raina K, Serkova NJ, Agarwal C and Agarwal R. Oral silibinin inhibits tumorigenic potential of colon cancer stem cells. In: Proceedings of the 106th Annual Meeting of the AACR; 2015 Apr 18-22; Philadelphia, PA. Cancer Research 2015;75(15 Suppl):Abstract nr 2807.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Raina K, Kumar S, Kumar D, Somasagara RR, Punia R, Kant R, Agarwal R and Agarwal C. Grape seed extract decreases visceral adiposity and impairs the pro-tumorigenic adipose tissue secretions affecting colorectal cancer growth and progression. In: Proceedings of the 106th Annual Meeting of AACR; 2015 Apr 18-22; Philadelphia, PA. Cancer Research 2015;75(15 Suppl):Abstract nr 901.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Kumar S, Kumar D, Raina K, Agarwal R, Agarwal C. Grape seed extract impairs adipocyte-colorectal cancer cell interaction and decreases adipocyte-driven colon cancer stem colonosphere formation. In: Proceedings of the 105th Annual Meeting of the American Association for Cancer Research; 2014 Apr 5-9; San Diego (CA). Cancer Research 2014; 74(19 Suppl): Abstract nr 4116.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Tyagi A, Somasagara R, Kumar S, Raina K, Agarwal C and Agarwal R. Silibinin modulates the inflammatory signals on colon cancer stem cells and provides protective effect against colitis-associated colon tumorigenesis. In: Proceedings of the 105th Annual Meeting of the AACR; 2014 Apr 5-9; San Diego, CA. Cancer Research 2014;74(19 Suppl): Abstract nr 2127.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Raina K, Agarwal C and Agarwal R. Silibinin strongly modulates the cytokine interleukin-4/6 survival signals in colon cancer stem cells. In: Proceedings of the 104th Annual Meeting of the American Association for Cancer Research; 2013 Apr 6-10; Washington, DC. Cancer Research 2013; 73 (8 Suppl): Abstract nr 4877.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Tyagi A, Raina K, Kumar S, Agarwal R and Agarwal C. Procyanidin B2 3,3″-di-O-gallate causes strong efficacy towards prostate cancer stem cells via targeting Notch1 signaling. In: Proceedings of the 104th Annual Meeting of the American Association for Cancer Research; 2013 Apr 6-10; Washington, DC. Cancer Research 2013; 73(8 Suppl): Abstract nr 2593.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Raina K, Agarwal C and Agarwal R. Effect of silibinin on the growth kinetics of 3D tumor spheroids: Colorectal cancer cells enriched for cancer stem cell phenotype. In: Proceedings of the AACR 103rd Annual Meeting 2012 Mar 31-Apr 4, 2012; Chicago, IL. Cancer Research 2012;72(8 Suppl):Abstract nr LB-179.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Raina K, Kumar S, Tyagi A, Agarwal C, and Agarwal R.  Silibinin causes strong efficacy towards colon cancer stem cells by modulating IL-4 caused CD44 expression. In: Proceedings of the 103rd Annual Meeting of the American Association for Cancer Research; 2012 Mar 31-Apr 4; Chicago, IL. Cancer Research 2012;72(8 Suppl):Abstract nr 1637.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Sharma R, Chaudhary P, Vatsyayan R, Sharma A, Awasthi S and Awasthi YC. (2011). Development of a novel competitive PCR for genotyping and quantitative estimation of RLIP76 and GSTA4-4 mRNA of transgenic mice. In: “Research Apreciation Day” University of North Texas Health Science Center, Fort Worth, TX, USA. 
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Shahi SK, Kumar A, Kumar S, Singh, SK and Gupta SK. (2009). Evidence Showing Polymicrobial Nature of Diabetic foot Infection. In: International Conference on “Emerging Trends in Biotechnology & 6th Annual Convention of The Biotech Research Society, India. Banaras Hindu University, and Indian Institute of Vegetable Research, Varanasi, Uttar Pradesh, India. 
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Shahi SK, Kumar A, Kumar S, Singh S K, and Gupta SK. (2009). Microbial Diversity and Polymorphisms of Suproxide Dismutase and Catalase Gene in Diabetic Foot Infection. In: “8th Annual Conference of Diabetic Foot Society of India”. Hotel “The Lalit” Barakhamba Road, New Delhi, India.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;">  Kumar S, Kumar A and Dixit VK. (2007). Genetic Diversity in Helicobacter pylori in North India. In: National Conference on “Microbial Diversity Avenues and Application”, Division of Life Science, Sardar Bhagwan Singh Post Graduate Institute of Biomedical Science and Research, Dehradun, Utrakhand, India.
+    </p></li>
+
+    <li><p style="text-align:left;line-height: 150%;padding-right:20px;"> Shahi SK, Gupta K, Kumar S, Singh SK, Gupta, SK and Kumar A. (2007). Assessment of Bacterial Diversity in the Diabetic foot Infection. In: National Conference on “Microbial Diversity Avenues and Application”, Division of Life Science, Sardar Bhagwan Singh Post Graduate Institute of Biomedical Science and Research, Dehradun, Utrakhand, India.
+    </p></li>
+  </ol>	
+</div>
+
+</div>
+ <br> <br> <br>
+
+</body>
+</html>
+
+
+
